@@ -12,7 +12,7 @@ res.sendFile(__dirname + '/public/index.html');
 app.get('/add',function(req,res){
 
 
-res.sendFile(__dirname + '/public/addQuote.html');
+res.sendFile(__dirname + '/public/AddQuote.html');
 //res.sendFile(__dirname + '/public/addNewQuote.html');
 
 });
