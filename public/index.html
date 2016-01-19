@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +8,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
-    <title>Starter Template for Bootstrap</title>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.js"></script>
+    
+    <title>Quote Blogger</title>
+     <link rel="stylesheet" href="/css/styles.css"> 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
+  <script type="text/javascript" src="js/routes.js"></script>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
@@ -32,7 +34,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-controller="myCtrl">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -47,7 +49,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#Home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -55,18 +57,11 @@
       </div>
     </nav>
 
+   
     <div class="container">
 
-      <div class="starter-template">
-        
-        <p class="lead">This blog has all the quotes which are popular</p>
-        <h2> One blog stop for all-too-true truisms</h2>
-      </div>
-      <p id="message"></p>
-      <ul class="nav nav-sidebar">
-            <li><a href="./add" class="btn btn-info">Share your quote</a></li>
-            <li><a href="./view" class="btn btn-info">View exisiting quotes</a></li>
-          </ul>
+      <div ng-view></div>
+      
     </div><!-- /.container -->
 
 
@@ -78,5 +73,6 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
   </body>
 </html>

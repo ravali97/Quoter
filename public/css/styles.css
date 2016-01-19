@@ -1,0 +1,23 @@
+.btn-md{
+	width:30%;
+	margin: 0 auto;
+	
+}
+
+.about{
+	padding-top: 40px;
+}
+
+.img-responsive{
+	
+	padding-bottom: 40px;
+	float: right;
+}
+.contactform{
+	float:right;
+	padding-right: 50px;
+}
+.leftform{
+	float:left;
+	padding-left: 40px;
+}
